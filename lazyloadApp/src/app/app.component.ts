@@ -26,7 +26,7 @@ export class AppComponent {
     const viewContainerRef = this.viewHost.viewContainerRef;
     viewContainerRef.clear();
 
-    this.loader.load('app/test/test.module#TestModule').then((moduleFactory: NgModuleFactory<any>) => {
+    this.loader.load('lazyloadLib#SampleModule').then((moduleFactory: NgModuleFactory<any>) => {
       const entryComponent = (<any>moduleFactory.moduleType).entry;
       const moduleRef = moduleFactory.create(this.inj);
 

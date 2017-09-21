@@ -23,9 +23,11 @@ export * from './sample.service';
     SampleComponent,
     SampleDirective,
     SamplePipe
-  ]
+  ],
+  entryComponents: [SampleComponent]
 })
 export class SampleModule {
+  static entry = SampleComponent;
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SampleModule,

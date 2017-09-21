@@ -22,7 +22,7 @@ import {SampleModule} from 'lazyloadLib';
   providers: [
     SystemJsNgModuleLoader,
     provideRoutes([
-      { loadChildren: 'app/test/test.module#TestModule' }
+      { loadChildren: 'lazyloadLib#SampleModule' }
     ])
   ],
   bootstrap: [AppComponent]
