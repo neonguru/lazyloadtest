@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import {TestModule} from './test/test.module';
 import {ViewHostDirective} from './view-host.directive';
 
+import {SampleModule} from 'lazyloadLib';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +16,8 @@ import {ViewHostDirective} from './view-host.directive';
   ],
   imports: [
     BrowserModule,
-    TestModule
+    TestModule,
+    SampleModule.forRoot()
   ],
   providers: [
     SystemJsNgModuleLoader,
