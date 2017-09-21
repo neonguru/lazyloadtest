@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule, SystemJsNgModuleLoader} from '@angular/core';
+import {provideRoutes} from '@angular/router';
 
 import { AppComponent } from './app.component';
+import {TestModule} from './test/test.module';
+import {ViewHostDirective} from './view-host.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewHostDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    TestModule
   ],
-  providers: [],
+  providers: [
+    SystemJsNgModuleLoader,
+    provideRoutes([
+      { loadChildren: 'app/test/test.module#TestModule' }
+    ])
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
