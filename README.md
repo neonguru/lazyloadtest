@@ -40,7 +40,7 @@ npm install
 
 npm link lazyloadLib
 
-npm serve -aot
+ng serve -aot
 
 http://localhost:4200/
 
@@ -54,7 +54,7 @@ Also notice test.module.chunk.js is lazy loaded
 And notice Sample Component is displayed below the button
 
 ## See attempt to lazy load external modle
-git checkout tags/broken
+git checkout master
 
 Change Directory to `lazyloadLib`
 
