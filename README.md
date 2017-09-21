@@ -5,8 +5,18 @@ This project is to examine the question I have on stack overflow:
 
 [stackoverflow question](https://stackoverflow.com/questions/46333005/how-to-use-systemjsngmoduleloader-to-lazy-load-an-external-module?noredirect=1#comment79631419_46333005)
 
+## Modules and Components
+`TestModule` provides `TestComponent`
+
+This is a local Module
+
+`SampleModule` provides `SampleComponent`
+
+This is from the lazyloadLib
 ## Requirements
 If you don't already have them:
+
+[NodeJS](https://nodejs.org/en/download/)
 
 npm install -g angular-cli
 
@@ -47,13 +57,13 @@ http://localhost:4200/
 ## In App
 click on load test button
 
-notice Test Component appears above button
+notice local Test Component appears above button
 
 Also notice test.module.chunk.js is lazy loaded
 
-And notice Sample Component is displayed below the button
+Then see that Sample Component (from lazyloadLib) is displayed below the button
 
-## See attempt to lazy load external modle
+## See attempt to lazy load external module
 git checkout master
 
 Change Directory to `lazyloadLib`
