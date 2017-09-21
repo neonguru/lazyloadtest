@@ -28,6 +28,8 @@ Change directory to `lazyloadApp`
 
 npm install
 
+npm link lazyloadLib
+
 npm serve -aot
 
 http://localhost:4200/
